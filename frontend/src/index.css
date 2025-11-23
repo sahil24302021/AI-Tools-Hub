@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+---------------------------------------- */
+input, textarea, select {
+  outline: none;
+}
+
+/* Disable double-tap zoom on iOS buttons */
+button {
+  touch-action: manipulation;
+}
+
+/* Remove default blue highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
