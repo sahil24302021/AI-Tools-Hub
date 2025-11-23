@@ -1,0 +1,9 @@
+flask
+flask-cors
+python-dotenv
+supabase
+python-jose
+PyJWT
+openai
+pypdf2
+stripe

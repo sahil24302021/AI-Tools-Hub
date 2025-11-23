@@ -1,0 +1,86 @@
+[2025-11-21 23:35:24,099] [INFO] app: Backend started successfully
+[2025-11-21 23:35:53,045] [ERROR] app: Chat error
+Traceback (most recent call last):
+  File "/Users/sahilkumar/ai-tools-hub/backend/routes/chat.py", line 28, in chat
+    reply = chat_completion(messages, temperature=temperature)
+  File "/Users/sahilkumar/ai-tools-hub/backend/utils/gemini_client.py", line 37, in chat_completion
+    response = model.generate_content(prompt, generation_config={"temperature": temperature})
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+        request,
+        **request_options,
+    )
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 835, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2025-11-21 23:40:20,084] [ERROR] app: Chat error
+Traceback (most recent call last):
+  File "/Users/sahilkumar/ai-tools-hub/backend/routes/chat.py", line 28, in chat
+    reply = chat_completion(messages, temperature=temperature)
+  File "/Users/sahilkumar/ai-tools-hub/backend/utils/gemini_client.py", line 37, in chat_completion
+    name = getattr(_m, 'name', '')
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+        request,
+        **request_options,
+    )
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 835, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/sahilkumar/ai-tools-hub/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+[2025-11-22 14:09:46,927] [INFO] app: Backend started successfully
+[2025-11-22 14:10:49,361] [INFO] app: Backend started successfully
+[2025-11-22 14:12:43,987] [INFO] app: Backend started successfully
+[2025-11-22 22:28:31,247] [INFO] app: Backend started successfully
+[2025-11-22 22:28:41,616] [INFO] app: Backend started successfully
