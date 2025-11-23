@@ -2,7 +2,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
-import Sidebar from "../components/layout/Sidebar";
+import Sidebar from "../components/layout/sidebar";
 import Footer from "../components/layout/Footer";
 
 export default function AppLayout() {
