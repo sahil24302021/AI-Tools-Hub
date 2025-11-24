@@ -66,7 +66,7 @@ def create_app() -> Flask:
     allowed_origins = [
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        "https://lambent-bavarois-95216a.netlify.app",
+        "https://lambent-bavarois-95216a.netlify.app"
     ]
     CORS(
         app,
