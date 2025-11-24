@@ -3,7 +3,7 @@ import axios from "axios";
 import { supabase } from "./supabaseClient";
 
 // Backend URL (auto-fixes trailing slash)
-const raw = import.meta.env?.VITE_BACKEND_URL || "http://127.0.0.1:5000";
+const raw = import.meta.env.VITE_BACKEND_URL;
 const baseURL = `${raw.replace(/\/$/, "")}/api`;
 
 const api = axios.create({
